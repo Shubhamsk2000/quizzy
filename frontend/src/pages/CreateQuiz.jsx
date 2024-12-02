@@ -52,7 +52,7 @@ const CreateQuiz = () => {
       const createdBy = localStorage.getItem("userId");
       const finalQuizData = { ...quizData, createdBy };
 
-      await axios.post("http://localhost:3000/api/quiz", finalQuizData, {
+      await axios.post("https://quizzy-jkv5.vercel.app/api/quiz", finalQuizData, {
         headers: { "x-auth-token": `${token}` },
       });
       alert("Quiz created successfully!");

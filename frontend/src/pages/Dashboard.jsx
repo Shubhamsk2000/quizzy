@@ -21,7 +21,7 @@ const Dashboard = () => {
   const fetchQuizzes = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get('http://localhost:3000/api/quiz/', {
+      const res = await axios.get('https://quizzy-jkv5.vercel.app/api/quiz/', {
         headers: { "x-auth-token": `${token}` },
       });
       setQuizzes(res.data);

@@ -14,7 +14,7 @@ const AttemptQuiz = () => {
     const fetchQuiz = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get(`http://localhost:3000/api/quiz/${quizId}`, {
+        const res = await axios.get(`https://quizzy-jkv5.vercel.app/api/quiz/${quizId}`, {
           headers: { "x-auth-token": `${token}` },
         });
         setQuiz(res.data);
@@ -36,7 +36,7 @@ const AttemptQuiz = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        `http://localhost:3000/api/result`,
+        `https://quizzy-jkv5.vercel.app/api/result`,
         { quizId, answers },
         {
           headers: { "x-auth-token": `${token}` },

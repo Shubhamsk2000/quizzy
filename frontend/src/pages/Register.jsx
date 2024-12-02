@@ -20,7 +20,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3000/api/auth/register', formData);
+      await axios.post('https://quizzy-jkv5.vercel.app/api/auth/register', formData);
       alert('Registration successful! You can now log in.');
       navigate('/login');
     } catch (err) {
