@@ -9,13 +9,7 @@ const app = express();
 connectDB();
 // Middleware
 app.use(bodyParser.json());
-app.use(cors(
-    {
-        origin:["https://quizzy-fun.vercel.app"],
-        methods: ["POST", "GET", "PUT", "DELETE"],
-        credentials: true
-    }
-));
+app.use(cors());
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/quiz', require('./routes/quiz'));
